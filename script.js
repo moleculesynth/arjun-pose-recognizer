@@ -1,6 +1,6 @@
 /* global tm */
 
-const mainEl = document.querySelector("#container");
+const mainEl = document.querySelector('#container');
 
 const wizard = new tm.Wizard({
   introduction: {
@@ -48,9 +48,9 @@ const wizard = new tm.Wizard({
     });
     images.forEach((img, i) => {
       if (i === highestIndex) {
-        img.classList.remove("hidden");
+        img.classList.remove('hidden');
       } else {
-        img.classList.add("hidden");
+        img.classList.add('hidden');
       }
     });
   },
@@ -62,14 +62,12 @@ const wizard = new tm.Wizard({
     const inferenceCamera = wizard.createInferenceCamera({
       size: 270
     });
-    const cameraContainer = document.querySelector(
-      "#inference-camera-container"
-    );
+    const cameraContainer = document.querySelector('#inference-camera-container');
     cameraContainer.appendChild(inferenceCamera);
-    mainEl.classList.add("ready");
+    mainEl.classList.add('ready');
   }
 });
 
 document
-  .querySelector("#train-model-button")
+  .querySelector('#train-model-button')
   .addEventListener("click", () => wizard.open());
